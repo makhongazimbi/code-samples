@@ -1,9 +1,19 @@
 package com.github.makho;
 
+/**
+ * My naive implementation of singly linked list with basic
+ * functionality.
+ *
+ * @author Makho Ngazimbi <makho.ngazimbi@gmail.com>
+ *
+ */
 public class MLinkedList<T extends Comparable<? super T>> {
   protected Node<T> head = null;
   protected int size = 0;
 
+  /**
+   * Reverse the list.
+   */
   public void reverse () {
     if (head == null) {
       return;
@@ -19,6 +29,9 @@ public class MLinkedList<T extends Comparable<? super T>> {
     }
   }
 
+  /**
+   * Add a value to the tail end of the list.
+   */
   public void add (T value) {
     if (head == null) {
       head = new Node<T>(value);
@@ -32,6 +45,9 @@ public class MLinkedList<T extends Comparable<? super T>> {
     size++;
   }
 
+  /**
+   * Remove a specified node.
+   */
   protected void remove (Node<T> node) {
     Node<T> runner = head;
     if (runner == null) {
@@ -49,6 +65,9 @@ public class MLinkedList<T extends Comparable<? super T>> {
     size--;
   }
 
+  /**
+   * Remove a node at a specified position.
+   */
   public void removeAt (int index) {
     Node<T> node = this.nodeAt(index);
     this.remove(node);
