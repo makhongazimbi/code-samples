@@ -3,9 +3,10 @@ package com.github.makho;
 /**
  * My naive implementation of singly linked list with basic
  * functionality.
+ * 
  *
  * @author Makho Ngazimbi <makho.ngazimbi@gmail.com>
- *
+ * @version 0.1
  */
 public class MLinkedList<T extends Comparable<? super T>> {
   protected Node<T> head = null;
